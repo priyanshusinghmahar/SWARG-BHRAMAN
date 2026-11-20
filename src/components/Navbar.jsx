@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import PahadiVibeLogo from './PahadiVibeLogo';
+import LiveWeatherPill from './LiveWeatherPill';
 import { 
   Compass, Sparkles, User, Store, ShieldCheck, Menu, X, 
-  Ticket, MapPin, Heart, LogIn, LogOut, ChevronDown, Bell 
+  Ticket, MapPin, Heart, LogIn, LogOut, ChevronDown, Bell, CloudSun 
 } from 'lucide-react';
 
-export default function Navbar({ bookingsCount, onOpenBookingModal }) {
+export default function Navbar({ bookingsCount, onOpenBookingModal, onOpenWeatherModal }) {
   const navigate = useNavigate();
   const location = useLocation();
   const { currentUser, logout, isLoggedIn } = useAuth();
@@ -28,6 +29,7 @@ export default function Navbar({ bookingsCount, onOpenBookingModal }) {
     { to: '/map', label: 'GPS Traffic Map' },
     { to: '/ai-planner', label: 'AI Planner' },
     { to: '/personal-suggester', label: 'Personal Suggester', highlight: true },
+    { to: '/weather', label: 'Live Weather' },
     { to: '/gallery', label: 'Gallery' },
     { to: '/reviews', label: 'Reviews' },
   ];
@@ -75,6 +77,9 @@ export default function Navbar({ bookingsCount, onOpenBookingModal }) {
           {/* Right Controls: Auth & CTAs */}
           <div className="hidden sm:flex items-center gap-2.5">
             
+            {/* Real-time Mountain Weather Pill */}
+            <LiveWeatherPill onOpenWeatherModal={onOpenWeatherModal} />
+
             {/* Auth Login Button / User Profile Menu */}
             {isLoggedIn ? (
               <div className="relative">
@@ -213,6 +218,21 @@ export default function Navbar({ bookingsCount, onOpenBookingModal }) {
       {mobileMenuOpen && (
         <div className="xl:hidden bg-[#0C121E] border-b border-amber-500/20 px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top-2">
           
+          {/* Mobile Live Weather Pill */}
+          <div className="pb-2 border-b border-white/10 flex items-center justify-between">
+            <LiveWeatherPill onOpenWeatherModal={(id) => {
+              setMobileMenuOpen(false);
+              onOpenWeatherModal?.(id);
+            }} />
+            <Link
+              to="/weather"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-xs text-amber-400 font-bold hover:underline"
+            >
+              Full Forecast →
+            </Link>
+          </div>
+
           {/* Navigation Links */}
           <div className="space-y-1 pt-2">
             {navLinks.map(link => (

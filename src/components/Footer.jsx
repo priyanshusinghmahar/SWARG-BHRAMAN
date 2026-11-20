@@ -41,6 +41,7 @@ export default function Footer() {
               <li><Link to="/events" className="hover:text-amber-400 transition">Live Ganga Aarti & Fairs</Link></li>
               <li><Link to="/food-shops" className="hover:text-amber-400 transition">Bal Mithai & Sweets</Link></li>
               <li><Link to="/map" className="hover:text-amber-400 transition">GPS Traffic Map</Link></li>
+              <li><Link to="/weather" className="hover:text-amber-400 transition text-sky-300 font-semibold">⛅ Live Weather & Temperature</Link></li>
               <li><Link to="/gallery" className="hover:text-amber-400 transition">Mountain Photo Gallery</Link></li>
               <li><Link to="/reviews" className="hover:text-amber-400 transition">Traveler Reviews</Link></li>
             </ul>

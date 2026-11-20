@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Mountain, Calendar, Star, Compass, ArrowRight, Check, Eye } from 'lucide-react';
+import { MapPin, Mountain, Calendar, Star, Compass, ArrowRight, Check, Eye, CloudSun } from 'lucide-react';
 import { handleImageError } from '../utils/imageFallback';
 
 export default function FamousLocations({ destinations, onBookLocation, onLocateOnMap, onAddToAIPlan }) {
@@ -127,20 +127,32 @@ export default function FamousLocations({ destinations, onBookLocation, onLocate
                 </div>
 
                 {/* Title & Altitude over Image */}
-                <div className="absolute bottom-3 left-4 right-4 text-white">
-                  <h3 className="text-2xl font-bold font-serif leading-tight text-white drop-shadow">
-                    {dest.name}
-                  </h3>
-                  <div className="flex items-center gap-3 text-xs text-slate-300 mt-1">
-                    <span className="flex items-center gap-1 text-sky-300">
-                      <Mountain className="w-3 h-3 text-sky-400" />
-                      {dest.altitude}
-                    </span>
-                    <span className="flex items-center gap-1 text-amber-300">
-                      <Calendar className="w-3 h-3 text-amber-400" />
-                      {dest.bestTime}
-                    </span>
+                <div className="absolute bottom-3 left-4 right-4 text-white flex items-end justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold font-serif leading-tight text-white drop-shadow">
+                      {dest.name}
+                    </h3>
+                    <div className="flex items-center gap-3 text-xs text-slate-300 mt-1">
+                      <span className="flex items-center gap-1 text-sky-300">
+                        <Mountain className="w-3 h-3 text-sky-400" />
+                        {dest.altitude}
+                      </span>
+                      <span className="flex items-center gap-1 text-amber-300">
+                        <Calendar className="w-3 h-3 text-amber-400" />
+                        {dest.bestTime}
+                      </span>
+                    </div>
                   </div>
+
+                  {/* Weather & Temperature Pill */}
+                  <Link
+                    to="/weather"
+                    className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-950/85 backdrop-blur-md text-[10px] font-bold text-sky-200 border border-sky-400/40 hover:border-amber-400 hover:text-white transition shadow-lg flex-shrink-0"
+                    title="Check live weather & temperature"
+                  >
+                    <CloudSun className="w-3 h-3 text-amber-400" />
+                    <span>Weather</span>
+                  </Link>
                 </div>
               </div>
 

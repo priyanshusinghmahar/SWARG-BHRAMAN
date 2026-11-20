@@ -23,11 +23,13 @@ import MyTripsPage from './pages/MyTripsPage';
 import TemplesHistoryPage from './pages/TemplesHistoryPage';
 import DistrictsMarketplacePage from './pages/DistrictsMarketplacePage';
 import PersonalSuggesterPage from './pages/PersonalSuggesterPage';
+import WeatherForecastPage from './pages/WeatherForecastPage';
 
 import UserPortal from './components/UserPortal';
 import VendorPortal from './components/VendorPortal';
 import AdminPortal from './components/AdminPortal';
 import ProductPurchaseModal from './components/ProductPurchaseModal';
+import WeatherModal from './components/WeatherModal';
 
 import {
   DESTINATIONS,
@@ -65,6 +67,15 @@ export default function App() {
   // Booking Modal State
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
   const [bookingModalData, setBookingModalData] = useState({});
+
+  // Live Weather Modal State
+  const [weatherModalOpen, setWeatherModalOpen] = useState(false);
+  const [selectedWeatherStationId, setSelectedWeatherStationId] = useState('kedarnath');
+
+  const handleOpenWeatherModal = (stationId = 'kedarnath') => {
+    setSelectedWeatherStationId(stationId);
+    setWeatherModalOpen(true);
+  };
 
   const handleOpenBookingModal = (data = {}) => {
     setBookingModalData(data);
@@ -154,6 +165,7 @@ export default function App() {
           <Navbar
             bookingsCount={userBookings.length}
             onOpenBookingModal={handleOpenBookingModal}
+            onOpenWeatherModal={handleOpenWeatherModal}
           />
 
           {/* Dedicated Page Routes */}
@@ -171,6 +183,7 @@ export default function App() {
                     photos={photos}
                     reviews={reviews}
                     onOpenBookingModal={handleOpenBookingModal}
+                    onOpenWeatherModal={handleOpenWeatherModal}
                   />
                 }
               />
@@ -285,6 +298,17 @@ export default function App() {
                 }
               />
 
+              {/* 7c. Live Weather & Temperature Page */}
+              <Route
+                path="/weather"
+                element={
+                  <WeatherForecastPage
+                    onBookTrip={handleOpenBookingModal}
+                    onOpenWeatherModal={handleOpenWeatherModal}
+                  />
+                }
+              />
+
               {/* 8. Gallery Page */}
               <Route
                 path="/gallery"
@@ -392,6 +416,14 @@ export default function App() {
             onClose={() => setPurchaseModalOpen(false)}
             product={selectedPurchaseProduct}
             onConfirmOrder={handleConfirmHaatOrder}
+          />
+
+          {/* Real-time Mountain Weather & Temperature Modal */}
+          <WeatherModal
+            isOpen={weatherModalOpen}
+            onClose={() => setWeatherModalOpen(false)}
+            initialStationId={selectedWeatherStationId}
+            onBookTrip={handleOpenBookingModal}
           />
 
         </div>

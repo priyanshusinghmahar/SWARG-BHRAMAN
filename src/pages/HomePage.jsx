@@ -14,7 +14,8 @@ export default function HomePage({
   foodShops,
   photos,
   reviews,
-  onOpenBookingModal
+  onOpenBookingModal,
+  onOpenWeatherModal
 }) {
   const navigate = useNavigate();
 
@@ -25,6 +26,7 @@ export default function HomePage({
       <Hero
         onOpenAIPlanner={() => navigate('/ai-planner')}
         onOpenPersonalSuggester={() => navigate('/personal-suggester')}
+        onOpenWeatherModal={onOpenWeatherModal}
         onExploreDestinations={() => navigate('/destinations')}
         onExploreArtisans={() => navigate('/artisans')}
         onOpenEvents={() => navigate('/events')}
@@ -33,7 +35,7 @@ export default function HomePage({
       {/* 2. Quick Feature Gateway Strip */}
       <section className="py-12 bg-[#0C1424] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3.5">
             
             <Link
               to="/destinations"
@@ -121,6 +123,21 @@ export default function HomePage({
               </div>
               <div className="mt-3 flex items-center gap-1 text-[11px] text-blue-400 font-bold">
                 <span>GPS Routes</span>
+                <ArrowRight className="w-3 h-3" />
+              </div>
+            </Link>
+
+            <Link
+              to="/weather"
+              className="p-4 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-sky-400/40 transition group flex flex-col justify-between"
+            >
+              <div>
+                <div className="text-2xl mb-1.5 group-hover:scale-110 transition">⛅</div>
+                <div className="font-bold text-white text-sm font-serif">Live Weather</div>
+                <p className="text-[11px] text-slate-400 mt-0.5 leading-snug">Open-Meteo temps & snow</p>
+              </div>
+              <div className="mt-3 flex items-center gap-1 text-[11px] text-sky-400 font-bold">
+                <span>Check Temps</span>
                 <ArrowRight className="w-3 h-3" />
               </div>
             </Link>

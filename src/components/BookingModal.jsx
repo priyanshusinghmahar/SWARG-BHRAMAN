@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { 
   X, Calendar, Users, MapPin, Sparkles, CheckCircle2, ShieldCheck, 
-  Printer, CreditCard, ArrowRight, Mountain, Compass, ChevronDown, Check
+  Printer, CreditCard, ArrowRight, Mountain, Compass, ChevronDown, Check, CloudSun, Thermometer
 } from 'lucide-react';
 import { DESTINATIONS } from '../data/mockData';
 import { handleImageError } from '../utils/imageFallback';
+import { fetchStationWeather, UTTARAKHAND_WEATHER_STATIONS } from '../utils/weatherService';
 
 // Curated list of all Uttarakhand booking locations & circuits
 const ALL_UTTARAKHAND_LOCATIONS = [
@@ -85,6 +86,22 @@ export default function BookingModal({
       if (match) setSelectedLocation(match);
     }
   }, [initialData]);
+
+  // Live Weather Telemetry for Selected Destination
+  const [locationWeather, setLocationWeather] = useState(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const locName = (selectedLocation?.name || '').toLowerCase();
+    const station = UTTARAKHAND_WEATHER_STATIONS.find(s => 
+      locName.includes(s.name.toLowerCase().split(' ')[0]) || 
+      s.name.toLowerCase().includes(locName.split(' ')[0])
+    ) || UTTARAKHAND_WEATHER_STATIONS[0];
+
+    fetchStationWeather(station).then(data => {
+      setLocationWeather(data);
+    });
+  }, [isOpen, selectedLocation]);
 
   const [travelDate, setTravelDate] = useState('2026-12-10');
   const [returnDate, setReturnDate] = useState('2026-12-15');
@@ -263,6 +280,21 @@ export default function BookingModal({
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isLocationDropdownOpen ? 'rotate-180' : ''}`} />
                 </div>
               </div>
+
+              {/* Live Mountain Weather Telemetry Pill for this Destination */}
+              {locationWeather && (
+                <div className="flex items-center justify-between px-3.5 py-2 rounded-xl bg-sky-950/40 border border-sky-400/20 text-xs">
+                  <div className="flex items-center gap-2">
+                    <span className="text-base">{locationWeather.condition.icon}</span>
+                    <span className="text-slate-300">
+                      Live Mountain Weather: <strong className="text-white">{locationWeather.currentTemp > 0 ? `+${locationWeather.currentTemp}` : locationWeather.currentTemp}°C</strong> ({locationWeather.condition.label})
+                    </span>
+                  </div>
+                  <span className="text-[10px] text-amber-300 font-semibold hidden sm:inline">
+                    {locationWeather.advice.badge}
+                  </span>
+                </div>
+              )}
 
               {/* Collapsible Location Selector Dropdown Grid */}
               {isLocationDropdownOpen && (

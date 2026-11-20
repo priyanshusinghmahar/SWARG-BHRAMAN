@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Sparkles, Compass, MapPin, Search, Calendar, ShieldCheck, HeartHandshake, Mountain, ArrowRight, Sun, Thermometer } from 'lucide-react';
+import { Sparkles, Compass, MapPin, Search, Calendar, ShieldCheck, HeartHandshake, Mountain, ArrowRight, Sun, Thermometer, CloudSun } from 'lucide-react';
 import { RELIABLE_HIMALAYAN_IMAGES } from '../utils/imageFallback';
+import LiveWeatherPill from './LiveWeatherPill';
 
-export default function Hero({ onOpenAIPlanner, onExploreDestinations, onExploreArtisans, onOpenEvents, onOpenPersonalSuggester }) {
+export default function Hero({ onOpenAIPlanner, onExploreDestinations, onExploreArtisans, onOpenEvents, onOpenPersonalSuggester, onOpenWeatherModal }) {
   const [quickQuery, setQuickQuery] = useState('');
 
   const quickPicks = [
@@ -34,9 +35,8 @@ export default function Hero({ onOpenAIPlanner, onExploreDestinations, onExplore
             <span>PahadiVibe Uttarakhand • Devbhoomi Reimagined</span>
           </div>
 
-          <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/80 backdrop-blur-xl border border-sky-400/30 text-sky-300 text-xs font-medium">
-            <Thermometer className="w-3.5 h-3.5 text-sky-400" />
-            <span>Almora 14°C • Auli Powder Snow • High Peaks Clear</span>
+          <div className="hidden sm:inline-flex">
+            <LiveWeatherPill onOpenWeatherModal={onOpenWeatherModal} />
           </div>
         </div>
 
