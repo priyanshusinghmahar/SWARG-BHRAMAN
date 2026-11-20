@@ -71,13 +71,13 @@ const ThemeContext = createContext(null);
 
 export const ThemeProvider = ({ children }) => {
   const [themeId, setThemeId] = useState(() => {
-    return localStorage.getItem('pahadivibe_theme') || 'emerald';
+    return localStorage.getItem('safarnama_theme') || localStorage.getItem('pahadivibe_theme') || 'emerald';
   });
 
   const currentTheme = THEMES[themeId] || THEMES.emerald;
 
   useEffect(() => {
-    localStorage.setItem('pahadivibe_theme', themeId);
+    localStorage.setItem('safarnama_theme', themeId);
     document.documentElement.setAttribute('data-theme', themeId);
 
     // Inject CSS variables directly on root

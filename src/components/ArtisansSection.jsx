@@ -160,7 +160,7 @@ export default function ArtisansSection({ artisans, onBookWorkshop, onLocateOnMa
                     </a>
                     
                     <a
-                      href={`https://wa.me/${artisan.whatsapp}?text=Namaste%20${encodeURIComponent(artisan.name)}!%20I%20found%20your%20craft%20on%20PahadiVibe.`}
+                      href={`https://wa.me/${artisan.whatsapp}?text=Namaste%20${encodeURIComponent(artisan.name)}!%20I%20found%20your%20craft%20on%20SafarNama.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="py-2.5 px-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition shadow"
@@ -199,7 +199,7 @@ export default function ArtisansSection({ artisans, onBookWorkshop, onLocateOnMa
               <span>🌾</span> Are you a local artisan, homestay host, or Pahadi folk artist?
             </h3>
             <p className="mt-1 text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Join the PahadiVibe verified artisan guild for zero commission. List your craft products, offer guided weaving or woodcarving classes, and connect directly with conscious travelers.
+              Join the SafarNama verified artisan guild for zero commission. List your craft products, offer guided weaving or woodcarving classes, and connect directly with conscious travelers.
             </p>
           </div>
           <button 

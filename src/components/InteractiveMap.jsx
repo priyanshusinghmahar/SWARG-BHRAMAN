@@ -401,7 +401,7 @@ export default function InteractiveMap({
             Live Highway Traffic & Turn-by-Turn Mountain GPS
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif">
-            Interactive PahadiVibe Navigation & Traffic Map
+            Interactive SafarNama Navigation & Traffic Map
           </h2>
           <p className="mt-2 text-slate-600 text-base">
             Powered by <strong>Mapbox Navigation & Live Traffic</strong>: Check real-time road conditions across Char Dham highways (NH-58 & NH-109), calculate exact driving times, and navigate directly to artisan studios and mountain eateries.

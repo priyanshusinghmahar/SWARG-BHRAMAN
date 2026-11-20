@@ -97,7 +97,7 @@ export default function GuidesPage({ guides = [], onBookGuide }) {
               Why Expedition Safety Comes First
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 mt-2">
-              Every guide verified on PahadiVibe adheres to strict Himalayan mountaineering safety protocols and state guidelines.
+              Every guide verified on SafarNama adheres to strict Himalayan mountaineering safety protocols and state guidelines.
             </p>
           </div>
 

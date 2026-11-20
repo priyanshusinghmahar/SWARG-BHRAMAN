@@ -88,7 +88,7 @@ export default function AdminPortal({
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase mb-2 border border-emerald-500/30">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                PahadiVibe Trust • State Administration Console
+                SafarNama Trust • State Administration Console
               </div>
               <h2 className="text-3xl font-extrabold font-serif text-white">
                 Platform Admin Portal

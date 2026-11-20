@@ -341,7 +341,7 @@ export default function MyTripsPage({ bookings = [], haatOrders = [], onOpenBook
                           </div>
                           <div>
                             <span className="text-slate-400 text-[10px] uppercase font-bold block">Mountain Scout & Homestay Coordinator</span>
-                            <span className="text-white font-bold text-sm">{booking.contactPerson || 'PahadiVibe Verified Field Host'}</span>
+                            <span className="text-white font-bold text-sm">{booking.contactPerson || 'SafarNama Verified Field Host'}</span>
                           </div>
                         </div>
 
@@ -377,7 +377,7 @@ export default function MyTripsPage({ bookings = [], haatOrders = [], onOpenBook
                         {/* QR Code Canvas Representation */}
                         <div className="p-3 bg-white rounded-2xl shadow-xl mx-auto my-3 inline-block">
                           <img
-                            src={`https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=PAHADIVIBE-PASS-${booking.id}-${encodeURIComponent(booking.packageTitle)}`}
+                            src={`https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=SAFARNAMA-PASS-${booking.id}-${encodeURIComponent(booking.packageTitle)}`}
                             alt={`Pass QR Code for ${booking.id}`}
                             className="w-32 h-32 object-contain"
                           />
@@ -472,7 +472,7 @@ export default function MyTripsPage({ bookings = [], haatOrders = [], onOpenBook
               <span className="text-[10px] text-slate-400">State Disaster Response Force</span>
             </div>
             <div className="p-3 bg-white/5 rounded-xl border border-white/10">
-              <strong className="text-white block">PahadiVibe Traveler Support</strong>
+              <strong className="text-white block">SafarNama Traveler Support</strong>
               <span className="text-amber-300 font-mono text-sm block font-bold">+91 94120 48219</span>
               <span className="text-[10px] text-slate-400">Direct concierge WhatsApp line</span>
             </div>

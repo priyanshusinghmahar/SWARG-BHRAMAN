@@ -721,7 +721,7 @@ export const GALLERY_PHOTOS = [
     location: 'Dharchula / Munsiyari',
     category: 'Local Arts & Culture',
     image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'Pahadi Vibe Team',
+    photographer: 'SafarNama Team',
     likes: 388,
     description: 'Master weaver spinning natural sheep wool on heritage mountain ground looms.'
   }

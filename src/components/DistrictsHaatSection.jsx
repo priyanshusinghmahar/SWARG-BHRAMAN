@@ -60,7 +60,7 @@ export default function DistrictsHaatSection({
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-bold tracking-wide uppercase mb-3">
               <ShoppingBag className="w-4 h-4 text-amber-400" />
-              PahadiVibe Haat • 100% Direct District Procurement
+              SafarNama Haat • 100% Direct District Procurement
             </div>
             <h2 className="text-3xl sm:text-5xl font-extrabold font-serif text-white tracking-tight">
               Famous Things of All 13 Districts
@@ -320,7 +320,7 @@ export default function DistrictsHaatSection({
                 How "Purchase Through Us" Works
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed">
-                When you order through PahadiVibe, we purchase directly from the verified rural self-help groups (SHGs), sweetmakers, and artisan cooperatives at full fair price, pack them in eco-friendly pine containers, and ship directly to your door with courier tracking.
+                When you order through SafarNama, we purchase directly from the verified rural self-help groups (SHGs), sweetmakers, and artisan cooperatives at full fair price, pack them in eco-friendly pine containers, and ship directly to your door with courier tracking.
               </p>
             </div>
           </div>

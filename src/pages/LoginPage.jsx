@@ -28,7 +28,7 @@ export default function LoginPage() {
 
     let userRole = selectedRole;
     let userName = fullName || (selectedRole === 'vendor' ? 'Meenakshi Joshi' : selectedRole === 'admin' ? 'Devbhoomi Trust Admin' : 'Priyanshu Singh Mahar');
-    let userEmail = email || `${selectedRole}@pahadivibe.in`;
+    let userEmail = email || `${selectedRole}@safarnama.in`;
 
     const userObj = {
       id: `usr-${Date.now()}`,
@@ -60,7 +60,7 @@ export default function LoginPage() {
       demoUser = {
         id: 'usr-traveler-1',
         name: 'Priyanshu Singh Mahar',
-        email: 'priyanshu@pahadivibe.in',
+        email: 'priyanshu@safarnama.in',
         role: 'traveler',
         avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80',
         badge: 'Verified Himalayan Explorer'
@@ -82,7 +82,7 @@ export default function LoginPage() {
       demoUser = {
         id: 'usr-admin-1',
         name: 'State Trust Administrator',
-        email: 'admin@pahadivibe.in',
+        email: 'admin@safarnama.in',
         role: 'admin',
         avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
         badge: 'State Trust Super Admin'
@@ -248,7 +248,7 @@ export default function LoginPage() {
               <input
                 type="email"
                 required
-                placeholder={selectedRole === 'vendor' ? 'artisan@pahadivibe.in' : 'traveler@pahadivibe.in'}
+                placeholder={selectedRole === 'vendor' ? 'artisan@safarnama.in' : 'traveler@safarnama.in'}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full pl-10 pr-4 py-2.5 bg-black/40 border border-white/15 rounded-xl text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none"

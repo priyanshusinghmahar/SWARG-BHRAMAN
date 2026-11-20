@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import PahadiVibeLogo from './PahadiVibeLogo';
+import SafarNamaLogo from './SafarNamaLogo';
 import LiveWeatherPill from './LiveWeatherPill';
 import { 
   Compass, Sparkles, User, Store, ShieldCheck, Menu, X, 
@@ -44,7 +44,7 @@ export default function Navbar({ bookingsCount, onOpenBookingModal, onOpenWeathe
             to="/"
             className="cursor-pointer group hover:opacity-95 transition"
           >
-            <PahadiVibeLogo size="md" />
+            <SafarNamaLogo size="md" />
           </Link>
 
           {/* Desktop Nav Links */}

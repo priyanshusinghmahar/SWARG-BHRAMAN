@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PahadiVibeLogo from './PahadiVibeLogo';
+import SafarNamaLogo from './SafarNamaLogo';
 import { Mountain, Phone, ShieldCheck, Heart, Sparkles, MapPin, Compass } from 'lucide-react';
 
 export default function Footer() {
@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Brand Col (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
             <Link to="/" className="inline-block hover:opacity-95 transition">
-              <PahadiVibeLogo size="lg" />
+              <SafarNamaLogo size="lg" />
             </Link>
             
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
@@ -131,7 +131,7 @@ export default function Footer() {
 
         {/* Bottom Strip */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© {new Date().getFullYear()} PahadiVibe Uttarakhand. Created with pride for mountain heritage & community empowerment.</p>
+          <p>© {new Date().getFullYear()} SafarNama Uttarakhand. Created with pride for mountain heritage & community empowerment.</p>
           <div className="flex gap-4">
             <span className="hover:text-white cursor-pointer transition">Eco-Pahadi Pledge</span>
             <span>•</span>

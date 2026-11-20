@@ -607,7 +607,7 @@ export default function BookingModal({
                 Booking Confirmed & Verified
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold font-serif text-white mt-2">
-                PahadiVibe Travel Pass Issued!
+                SafarNama Travel Pass Issued!
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-md mx-auto">
                 A digital pass and local host details have been confirmed for <strong>{confirmedBookingData.destination}</strong>.

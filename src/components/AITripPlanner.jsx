@@ -232,7 +232,7 @@ export default function AITripPlanner({ onBookGeneratedPlan, initialBudget = 250
           title: 'White Water Rafting on Ganges & Neer Garh Waterfall',
           morning: 'Gear up for 16 km Grade-III white water rafting from Shivpuri through Roller Coaster and Club House rapids.',
           afternoon: 'Hike to Neer Garh cascade for a dip in turquoise mountain spring pools.',
-          evening: 'VIP front-row seating at Triveni Ghat Maha Aarti arranged by PahadiVibe concierges.',
+          evening: 'VIP front-row seating at Triveni Ghat Maha Aarti arranged by SafarNama concierges.',
           stay: 'Tapovan Riverside Haven',
           foodHighlight: 'Chotiwala Royal Feast with Pahadi Dal and Gulab Jamun',
           artisanHighlight: 'Ganges clay diyas and natural river incense'

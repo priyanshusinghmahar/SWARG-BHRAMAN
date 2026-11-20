@@ -141,7 +141,7 @@ export default function PersonalSuggester({ onBookCircuit, onSaveToTrips }) {
           </div>
           <div>
             <div className="text-xs text-amber-400 font-bold tracking-wider uppercase">
-              PahadiVibe Personal Recommender
+              SafarNama Personal Recommender
             </div>
             <div className="text-white font-extrabold text-sm sm:text-base font-serif">
               {viewMode === 'quiz' ? 'Find Your Mountain Vibe Quiz' : `Personal Matches: ${userArchetype}`}

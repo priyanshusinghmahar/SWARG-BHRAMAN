@@ -95,7 +95,7 @@ export default function ProductPurchaseModal({
                 Order Placed Successfully
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold font-serif text-white mt-2">
-                PahadiVibe Haat Order Confirmed!
+                SafarNama Haat Order Confirmed!
               </h3>
               <p className="text-xs text-slate-300 mt-1">
                 Your direct purchase has been allocated to <strong>{confirmedOrder.artisanGuild}</strong> in {confirmedOrder.district}.
@@ -166,7 +166,7 @@ export default function ProductPurchaseModal({
             </div>
 
             <h3 className="text-2xl font-extrabold font-serif text-white">
-              Purchase Through PahadiVibe
+              Purchase Through SafarNama
             </h3>
             <p className="text-xs text-slate-300 mt-1 mb-6">
               Procured directly from verified cooperatives, sweetmakers, and women's self-help groups in Uttarakhand.

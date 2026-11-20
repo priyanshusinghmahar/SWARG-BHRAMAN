@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function PahadiVibeLogo({ size = 'md', showSubtitle = true, className = '' }) {
+export default function SafarNamaLogo({ size = 'md', showSubtitle = true, className = '' }) {
   // Dimension presets
   const sizeMap = {
     sm: { iconSize: 32, textScale: 'text-base', subScale: 'text-[8px]' },
@@ -115,7 +115,7 @@ export default function PahadiVibeLogo({ size = 'md', showSubtitle = true, class
       <div>
         <div className="flex items-center gap-1.5 sm:gap-2">
           <span className={`font-black font-serif tracking-tight text-white leading-none ${textScale}`}>
-            Pahadi<span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">Vibe</span>
+            Safar<span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">Nama</span>
           </span>
           <span className="text-[9px] sm:text-[10px] font-extrabold text-amber-400 tracking-wider uppercase px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30">
             Devbhoomi
@@ -131,3 +131,6 @@ export default function PahadiVibeLogo({ size = 'md', showSubtitle = true, class
     </div>
   );
 }
+
+// Backward compatibility alias
+export const PahadiVibeLogo = SafarNamaLogo;

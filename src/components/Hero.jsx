@@ -32,7 +32,7 @@ export default function Hero({ onOpenAIPlanner, onExploreDestinations, onExplore
         <div className="flex flex-wrap items-center justify-center gap-2.5 mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-semibold shadow-lg">
             <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
-            <span>PahadiVibe Uttarakhand • Devbhoomi Reimagined</span>
+            <span>SafarNama Uttarakhand • Devbhoomi Reimagined</span>
           </div>
 
           <div className="hidden sm:inline-flex">
