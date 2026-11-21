@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Hero from '../components/Hero';
+import LoginSection from '../components/LoginSection';
 import { handleImageError } from '../utils/imageFallback';
 import { 
   Mountain, Palette, Radio, UtensilsCrossed, Compass, 
@@ -35,7 +36,7 @@ export default function HomePage({
       {/* 2. Quick Feature Gateway Strip */}
       <section className="py-12 bg-[#0C1424] border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3.5">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3">
             
             <Link
               to="/destinations"
@@ -141,6 +142,21 @@ export default function HomePage({
                 <ArrowRight className="w-3 h-3" />
               </div>
             </Link>
+
+            <a
+              href="#login-section"
+              className="p-4 rounded-2xl bg-amber-500/10 hover:bg-amber-500/15 border border-amber-500/30 hover:border-amber-400/50 transition group flex flex-col justify-between"
+            >
+              <div>
+                <div className="text-2xl mb-1.5 group-hover:scale-110 transition">🔐</div>
+                <div className="font-bold text-amber-300 text-sm font-serif">Sign In / Portals</div>
+                <p className="text-[11px] text-slate-300 mt-0.5 leading-snug">Traveler, artisan & admin</p>
+              </div>
+              <div className="mt-3 flex items-center gap-1 text-[11px] text-amber-400 font-bold">
+                <span>Access Portals</span>
+                <ArrowRight className="w-3 h-3" />
+              </div>
+            </a>
 
           </div>
         </div>
@@ -509,6 +525,9 @@ export default function HomePage({
           </div>
         </div>
       </section>
+
+      {/* 6. Account Login & Role Portal Section */}
+      <LoginSection />
 
     </div>
   );

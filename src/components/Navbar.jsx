@@ -30,6 +30,7 @@ export default function Navbar({ bookingsCount, onOpenBookingModal, onOpenWeathe
     { to: '/ai-planner', label: 'AI Planner' },
     { to: '/personal-suggester', label: 'Personal Suggester', highlight: true },
     { to: '/weather', label: 'Live Weather' },
+    { to: '/login', label: 'Login / Portals', highlight: true },
     { to: '/gallery', label: 'Gallery' },
     { to: '/reviews', label: 'Reviews' },
   ];
