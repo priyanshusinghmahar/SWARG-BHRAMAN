@@ -11,7 +11,7 @@ export default function DestinationsPage({ destinations, onBookLocation }) {
         destinations={destinations}
         onBookLocation={onBookLocation}
         onLocateOnMap={(item) => navigate('/map')}
-        onAddToAIPlan={() => navigate('/ai-planner')}
+        onAddToAIPlan={() => navigate('/personal-suggester')}
       />
     </div>
   );

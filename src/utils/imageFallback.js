@@ -1,4 +1,4 @@
-// Image Fallback & Universal Error Handler for SafarNama
+// Image Fallback & Universal Error Handler for SwargBhraman
 
 // Beautiful SVG Data URI placeholders with Himalayan mountain silhouettes & gradients
 export const getMountainFallback = (title = 'Himalayan Devbhoomi', subtitle = 'Sacred Peaks • Uttarakhand') => {
@@ -70,7 +70,7 @@ export const getMountainFallback = (title = 'Himalayan Devbhoomi', subtitle = 'S
 };
 
 // Universal error handler to attach to <img onError={handleImageError} />
-export const handleImageError = (e, fallbackTitle = 'SafarNama Mountain') => {
+export const handleImageError = (e, fallbackTitle = 'SwargBhraman Mountain') => {
   e.currentTarget.onerror = null; // Prevent infinite loop
   e.currentTarget.src = getMountainFallback(fallbackTitle);
 };

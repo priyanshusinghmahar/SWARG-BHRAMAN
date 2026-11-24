@@ -391,37 +391,37 @@ export default function InteractiveMap({
   };
 
   return (
-    <section id="interactive-map" className="py-12 bg-white border-y border-slate-200">
+    <section id="interactive-map" className="py-12 bg-slate-50 dark:bg-[#070B18] text-slate-900 dark:text-white border-y border-slate-200 dark:border-amber-500/20 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold tracking-wide uppercase mb-3">
-            <Car className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
-            Live Highway Traffic & Turn-by-Turn Mountain GPS
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-800 dark:text-amber-300 text-xs font-bold tracking-wide uppercase mb-3">
+            <Car className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 animate-pulse" />
+            Live Highway Traffic &amp; Turn-by-Turn Mountain GPS
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif">
-            Interactive SafarNama Navigation & Traffic Map
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-serif">
+            Interactive SwargBhraman Navigation &amp; Traffic Map
           </h2>
-          <p className="mt-2 text-slate-600 text-base">
-            Powered by <strong>Mapbox Navigation & Live Traffic</strong>: Check real-time road conditions across Char Dham highways (NH-58 & NH-109), calculate exact driving times, and navigate directly to artisan studios and mountain eateries.
+          <p className="mt-2 text-slate-600 dark:text-slate-300 text-base">
+            Powered by <strong>Mapbox Navigation &amp; Live Traffic</strong>: Check real-time road conditions across Char Dham highways (NH-58 &amp; NH-109), calculate exact driving times, and navigate directly to artisan studios and mountain eateries.
           </p>
 
           {/* Live Traffic & Mapbox Connected Badges */}
           <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-ping" />
-              <span>Live Traffic Feed Active (Char Dham Routes & Kumaon Ghats)</span>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 text-amber-900 dark:text-amber-300 border border-amber-500/40">
+              <span className="w-2.5 h-2.5 rounded-full bg-amber-500 animate-ping" />
+              <span>Live Traffic Feed Active (Char Dham Routes &amp; Kumaon Ghats)</span>
             </div>
-            <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200">
-              <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
+            <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-white/20">
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
               <span>Mapbox GL Token Verified (priyanshumahar215)</span>
             </div>
           </div>
         </div>
 
         {/* Filter Bar & Style Switcher */}
-        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 mb-6 bg-slate-50 p-3 rounded-2xl border border-slate-200">
+        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 mb-6 bg-white dark:bg-[#0C1527] p-3 rounded-2xl border border-slate-200 dark:border-white/10 shadow-sm">
           
           {/* Category Filters */}
           <div className="flex flex-wrap gap-2">
@@ -439,7 +439,7 @@ export default function InteractiveMap({
                 className={`px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 ${
                   activeCategory === cat.id
                     ? 'bg-pahadi-pine text-white shadow-md shadow-emerald-950/20'
-                    : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-200'
+                    : 'bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10'
                 }`}
               >
                 <span>{cat.icon}</span>
@@ -460,22 +460,22 @@ export default function InteractiveMap({
                   calculateMapboxRoute(navOrigin, filteredPoints[0]);
                 }
               }}
-              className="px-3 py-1.5 bg-emerald-800 hover:bg-emerald-900 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow"
+              className="px-3 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow"
             >
               <Navigation className="w-3.5 h-3.5" />
               <span>Route Directions</span>
             </button>
 
             {/* Mapbox Style Switcher */}
-            <div className="flex items-center gap-1 bg-white px-2 py-1.5 rounded-xl border border-slate-200 text-xs shadow-sm">
-              <Layers className="w-3.5 h-3.5 text-slate-500" />
+            <div className="flex items-center gap-1 bg-slate-50 dark:bg-slate-900 px-2 py-1.5 rounded-xl border border-slate-200 dark:border-white/15 text-xs shadow-sm">
+              <Layers className="w-3.5 h-3.5 text-slate-500 dark:text-slate-400" />
               <select
                 value={mapStyle}
                 onChange={(e) => setMapStyle(e.target.value)}
-                className="bg-transparent font-bold text-slate-700 focus:outline-none cursor-pointer"
+                className="bg-transparent font-bold text-slate-700 dark:text-slate-200 focus:outline-none cursor-pointer"
               >
                 {mapStyles.map(s => (
-                  <option key={s.id} value={s.id}>
+                  <option key={s.id} value={s.id} className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
                     {s.label}
                   </option>
                 ))}
@@ -489,7 +489,7 @@ export default function InteractiveMap({
                 placeholder="Search spots..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-3 py-1.5 text-xs bg-white border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-600 focus:outline-none"
+                className="w-full px-3 py-1.5 text-xs bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-white/15 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-emerald-600 focus:outline-none"
               />
             </div>
           </div>
@@ -686,17 +686,17 @@ export default function InteractiveMap({
           </div>
 
           {/* Sidebar / Quick Locator List (4 Cols) */}
-          <div className="lg:col-span-4 bg-slate-50 rounded-2xl border border-slate-200 p-4 h-[560px] flex flex-col">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-200 mb-3">
-              <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+          <div className="lg:col-span-4 bg-white dark:bg-[#0E1627] rounded-2xl border border-slate-200 dark:border-white/10 p-4 h-[560px] flex flex-col text-slate-900 dark:text-white shadow-sm">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-white/10 mb-3">
+              <span className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider">
                 Showing {filteredPoints.length} Mountain Locations
               </span>
-              <span className="text-xs text-slate-500">Click to locate</span>
+              <span className="text-xs text-slate-500 dark:text-slate-400">Click to locate</span>
             </div>
 
             <div className="overflow-y-auto pr-1 flex-1 space-y-2.5">
               {filteredPoints.length === 0 ? (
-                <div className="text-center py-12 text-slate-500 text-xs">
+                <div className="text-center py-12 text-slate-500 dark:text-slate-400 text-xs">
                   No matching Uttarakhand locations found for "{searchQuery}".
                 </div>
               ) : (
@@ -711,8 +711,8 @@ export default function InteractiveMap({
                       onClick={() => handleFlyTo(item)}
                       className={`p-3 rounded-xl cursor-pointer transition-all border text-left ${
                         isSelected
-                          ? 'bg-emerald-50/90 border-emerald-500 shadow-sm'
-                          : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50'
+                          ? 'bg-emerald-50/90 dark:bg-emerald-950/40 border-emerald-500 shadow-sm'
+                          : 'bg-slate-50 dark:bg-white/5 border-slate-200 dark:border-white/10 hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-900 dark:text-white'
                       }`}
                     >
                       <div className="flex items-start gap-3">
@@ -728,19 +728,19 @@ export default function InteractiveMap({
                               {item.typeLabel}
                             </span>
                           </div>
-                          <h4 className="font-bold text-slate-900 text-xs truncate">
+                          <h4 className="font-bold text-slate-900 dark:text-white text-xs truncate font-serif">
                             {name}
                           </h4>
-                          <p className="text-[11px] text-slate-600 truncate mt-0.5">
+                          <p className="text-[11px] text-slate-600 dark:text-slate-300 truncate mt-0.5">
                             {item.craftType || item.specialty || item.tagline || item.location}
                           </p>
-                          <div className="flex items-center justify-between mt-2 pt-1.5 border-t border-slate-100 text-[11px]">
-                            <span className="text-slate-500 flex items-center gap-1">
+                          <div className="flex items-center justify-between mt-2 pt-1.5 border-t border-slate-200 dark:border-white/10 text-[11px]">
+                            <span className="text-slate-500 dark:text-slate-400 flex items-center gap-1">
                               <MapPin className="w-3 h-3 text-slate-400" />
                               {item.region || item.locationName || 'Uttarakhand'}
                             </span>
                             {phone && (
-                              <span className="text-amber-800 font-medium">
+                              <span className="text-amber-700 dark:text-amber-400 font-medium">
                                 📞 {phone.slice(0, 15)}
                               </span>
                             )}
@@ -749,13 +749,13 @@ export default function InteractiveMap({
                       </div>
 
                       {/* Quick Navigate Button on Every Item */}
-                      <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between gap-2">
+                      <div className="mt-3 pt-2 border-t border-slate-200 dark:border-white/10 flex items-center justify-between gap-2">
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
                             handleStartNavigationTo(item);
                           }}
-                          className="flex-1 py-1 px-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 rounded-lg text-[11px] font-bold flex items-center justify-center gap-1 transition"
+                          className="flex-1 py-1 px-2.5 bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/40 rounded-lg text-[11px] font-bold flex items-center justify-center gap-1 transition"
                         >
                           <Navigation className="w-3 h-3" />
                           <span>Get Route & Traffic</span>
@@ -766,10 +766,10 @@ export default function InteractiveMap({
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
-                          className="p-1.5 bg-slate-100 hover:bg-slate-200 rounded-lg text-slate-600"
+                          className="p-1.5 bg-slate-100 hover:bg-slate-200 dark:bg-white/10 dark:hover:bg-white/15 rounded-lg text-slate-600 dark:text-slate-300"
                           title="Open in Google Maps"
                         >
-                          <Navigation className="w-3 h-3 text-slate-700" />
+                          <Navigation className="w-3 h-3 text-slate-700 dark:text-slate-300" />
                         </a>
                       </div>
 

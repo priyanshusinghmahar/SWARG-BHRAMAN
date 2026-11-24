@@ -12,7 +12,7 @@ export default function FamousFoodAndShops({ foodShops, onLocateOnMap }) {
   });
 
   return (
-    <section id="famous-shops" className="py-20 bg-[#07100F] text-white relative">
+    <section id="famous-shops" className="py-20 bg-slate-50 dark:bg-[#07100F] text-slate-900 dark:text-white relative transition-colors duration-300">
       {/* Decorative Warm Ambient Glow */}
       <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-amber-500/10 rounded-full blur-[140px] pointer-events-none" />
 
@@ -21,14 +21,14 @@ export default function FamousFoodAndShops({ foodShops, onLocateOnMap }) {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-wide uppercase mb-3">
-              <UtensilsCrossed className="w-3.5 h-3.5 text-amber-400" />
-              Mountain Gastronomy & Heritage Bazaars
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-800 dark:text-amber-300 text-xs font-semibold tracking-wide uppercase mb-3">
+              <UtensilsCrossed className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
+              Mountain Gastronomy &amp; Heritage Bazaars
             </div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-serif">
-              Famous Pahadi Food Joints & Traditional Art Shops
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-950 dark:text-white font-serif">
+              Famous Pahadi Food Joints &amp; Traditional Art Shops
             </h2>
-            <p className="mt-3 text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed">
+            <p className="mt-3 text-slate-700 dark:text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed">
               Taste legendary 160-year-old Bal Mithai from Almora, savor piping hot Bhatt ki Churkani with Mandua rotis, and visit certified handloom emporiums.
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function FamousFoodAndShops({ foodShops, onLocateOnMap }) {
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition ${
                   activeCategory === cat.id
                     ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-lg shadow-amber-950/40'
-                    : 'bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 border border-white/10'
+                    : 'bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/10 border border-slate-200 dark:border-white/10 shadow-sm dark:shadow-none'
                 }`}
               >
                 {cat.label}
@@ -61,7 +61,7 @@ export default function FamousFoodAndShops({ foodShops, onLocateOnMap }) {
           {filteredShops.map(shop => (
             <div
               key={shop.id}
-              className="bg-[#0E201D]/90 rounded-3xl overflow-hidden border border-white/10 hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-950/30 transition-all duration-500 flex flex-col group hover:-translate-y-1.5 backdrop-blur-md"
+              className="bg-white dark:bg-[#0E201D]/90 rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-950/30 transition-all duration-500 flex flex-col group hover:-translate-y-1.5 shadow-lg dark:shadow-xl backdrop-blur-md"
             >
               {/* Image & Badges */}
               <div className="relative h-56 bg-slate-900 overflow-hidden">
@@ -70,7 +70,7 @@ export default function FamousFoodAndShops({ foodShops, onLocateOnMap }) {
                   alt={shop.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0E201D] via-transparent to-black/30" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
                 
                 {/* Badge */}
                 <div className="absolute top-3 left-3">
@@ -83,7 +83,7 @@ export default function FamousFoodAndShops({ foodShops, onLocateOnMap }) {
                 <div className="absolute top-3 right-3 flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-white text-xs font-bold border border-white/20 shadow">
                   <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                   <span>{shop.rating}</span>
-                  <span className="text-slate-400 font-normal">({shop.reviewsCount})</span>
+                  <span className="text-slate-300 font-normal">({shop.reviewsCount})</span>
                 </div>
 
                 {/* Title & Location on Image */}
@@ -101,34 +101,34 @@ export default function FamousFoodAndShops({ foodShops, onLocateOnMap }) {
               {/* Card Body */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="inline-block px-3 py-1 rounded-lg bg-amber-500/10 text-amber-300 border border-amber-500/20 text-[11px] font-bold mb-3">
+                  <div className="inline-block px-3 py-1 rounded-lg bg-amber-100 dark:bg-amber-500/10 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/20 text-[11px] font-bold mb-3">
                     {shop.category}
                   </div>
 
-                  <p className="text-xs text-slate-300 leading-relaxed line-clamp-2 mb-4">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2 mb-4">
                     {shop.description}
                   </p>
 
                   {/* Specialty Dish */}
-                  <div className="p-3.5 bg-black/40 rounded-2xl border border-white/10 mb-4">
-                    <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-0.5">
+                  <div className="p-3.5 bg-amber-50/80 dark:bg-black/40 rounded-2xl border border-amber-200 dark:border-white/10 mb-4">
+                    <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-0.5">
                       Signature Specialty:
                     </div>
-                    <div className="text-xs font-bold text-amber-300">
+                    <div className="text-xs font-bold text-amber-800 dark:text-amber-300">
                       {shop.specialty}
                     </div>
                   </div>
 
                   {/* Must Try List */}
                   <div className="mb-4">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 block mb-2">
                       Must Try Dishes / Souvenirs:
                     </span>
                     <div className="flex flex-wrap gap-1.5">
                       {shop.mustTry.map((item, idx) => (
                         <span
                           key={idx}
-                          className="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-[11px] text-slate-300"
+                          className="px-2.5 py-1 rounded-lg bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-[11px] text-slate-700 dark:text-slate-300 font-medium"
                         >
                           ✦ {item}
                         </span>
@@ -137,30 +137,30 @@ export default function FamousFoodAndShops({ foodShops, onLocateOnMap }) {
                   </div>
 
                   {/* Timings & Price */}
-                  <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-400 pt-3 border-t border-white/10">
+                  <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-500 dark:text-slate-400 pt-3 border-t border-slate-200 dark:border-white/10">
                     <div className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5 text-slate-400" />
+                      <Clock className="w-3.5 h-3.5 text-slate-500 dark:text-slate-400" />
                       <span className="truncate">{shop.timings}</span>
                     </div>
-                    <div className="text-right font-semibold text-amber-400">
+                    <div className="text-right font-semibold text-amber-700 dark:text-amber-400">
                       {shop.priceRange}
                     </div>
                   </div>
                 </div>
 
                 {/* Direct Contacts & Actions */}
-                <div className="pt-4 mt-4 border-t border-white/10 space-y-2">
+                <div className="pt-4 mt-4 border-t border-slate-200 dark:border-white/10 space-y-2">
                   <div className="grid grid-cols-2 gap-2">
                     <a
                       href={`tel:${shop.contact}`}
-                      className="py-2.5 px-3 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition"
+                      className="py-2.5 px-3 bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-300 dark:border-white/10 text-slate-800 dark:text-slate-200 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition"
                     >
-                      <Phone className="w-3.5 h-3.5 text-emerald-400" />
+                      <Phone className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                       <span>{shop.contact.slice(0, 14)}</span>
                     </a>
-
+                    
                     <a
-                      href={`https://wa.me/${shop.whatsapp}?text=Hello!%20I%20am%20visiting%20Uttarakhand%20and%20would%20like%20to%20know%20more%20about%20${encodeURIComponent(shop.name)}.`}
+                      href={`https://wa.me/${shop.whatsapp}?text=Namaste!%20I%20found%20${encodeURIComponent(shop.name)}%20on%20SwargBhraman.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="py-2.5 px-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition shadow"
@@ -170,27 +170,14 @@ export default function FamousFoodAndShops({ foodShops, onLocateOnMap }) {
                     </a>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2">
-                    <button
-                      onClick={() => onLocateOnMap(shop)}
-                      className="py-2.5 px-3 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 shadow"
-                    >
-                      <MapPin className="w-3.5 h-3.5" />
-                      <span>Pin on Map</span>
-                    </button>
-
-                    <a
-                      href={`https://www.google.com/maps/dir/?api=1&destination=${shop.lat},${shop.lng}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="py-2.5 px-3 bg-white/10 hover:bg-white/15 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5"
-                    >
-                      <Navigation className="w-3.5 h-3.5" />
-                      <span>Directions</span>
-                    </a>
-                  </div>
+                  <button
+                    onClick={() => onLocateOnMap(shop)}
+                    className="w-full py-2.5 px-3 bg-slate-100 hover:bg-slate-200 dark:bg-white/10 dark:hover:bg-white/15 text-slate-800 dark:text-white border border-slate-300 dark:border-transparent rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer"
+                  >
+                    <Navigation className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
+                    <span>Get Directions on Map</span>
+                  </button>
                 </div>
-
               </div>
             </div>
           ))}

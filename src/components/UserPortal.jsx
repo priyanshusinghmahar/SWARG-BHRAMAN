@@ -1,37 +1,66 @@
 import React, { useState } from 'react';
-import { User, Calendar, MapPin, Ticket, Heart, MessageSquare, ShieldCheck, Printer, ArrowRight, Sparkles } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { User, Calendar, MapPin, Ticket, Heart, MessageSquare, ShieldCheck, Printer, ArrowRight, Sparkles, Compass, AlertTriangle } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
+import EmptyState from './EmptyState';
 
 export default function UserPortal({
   bookings,
   wishlist = [],
-  onOpenBookingModal,
-  onOpenAIPlanner
+  onOpenBookingModal
 }) {
   const [activeTab, setActiveTab] = useState('bookings');
+  const location = useLocation();
+  const { currentUser } = useAuth();
+
+  const userName = currentUser?.name || 'Priyanshu Singh Mahar';
+  const userInitials = userName.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() || 'PS';
+  const userBadge = currentUser?.badge || 'Verified Explorer';
 
   return (
     <div className="py-14 bg-[#07100F] text-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
+        {/* Access Denied Notification Banner */}
+        {location.state?.accessDenied && (
+          <div className="mb-6 p-4 rounded-2xl bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 animate-in fade-in">
+            <div className="flex items-center gap-2.5">
+              <AlertTriangle className="w-5 h-5 text-amber-400 flex-shrink-0" />
+              <span>{location.state.message || 'Access Denied: That portal is restricted to Admin or Vendor credentials.'}</span>
+            </div>
+            <Link to="/provider/login" className="px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs whitespace-nowrap self-start sm:self-auto transition">
+              Provider Login
+            </Link>
+          </div>
+        )}
+
         {/* User Profile Header Card */}
         <div className="bg-[#0E201D]/90 rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/10 mb-8 backdrop-blur-xl">
           <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6">
             <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-              <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-emerald-600 via-teal-600 to-amber-500 text-white flex items-center justify-center font-bold text-2xl shadow-lg border-2 border-white/20">
-                PS
-              </div>
+              {currentUser?.avatar ? (
+                <img
+                  src={currentUser.avatar}
+                  alt={userName}
+                  className="w-20 h-20 rounded-2xl object-cover shadow-lg border-2 border-white/20"
+                />
+              ) : (
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-emerald-600 via-teal-600 to-amber-500 text-white flex items-center justify-center font-bold text-2xl shadow-lg border-2 border-white/20">
+                  {userInitials}
+                </div>
+              )}
               <div>
                 <div className="flex items-center justify-center sm:justify-start gap-2">
                   <h2 className="text-2xl font-bold font-serif text-white">
-                    Priyanshu Singh Mahar
+                    {userName}
                   </h2>
                   <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-bold flex items-center gap-1">
                     <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                    Verified Explorer
+                    {userBadge}
                   </span>
                 </div>
                 <p className="text-xs text-slate-400 mt-0.5">
-                  Member since 2026 • Cultural & Trekking Enthusiast • Uttarakhand Roots
+                  Explorer Account • {currentUser?.email || 'priyanshu@swargbraman.in'} • Uttarakhand Trips
                 </p>
                 <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 mt-3 text-xs text-slate-300">
                   <span>🎟️ <strong className="text-white">{bookings.length}</strong> Active Trips</span>
@@ -42,13 +71,13 @@ export default function UserPortal({
             </div>
 
             <div>
-              <button
-                onClick={onOpenAIPlanner}
+              <Link
+                to="/destinations"
                 className="px-5 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-lg"
               >
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>AI Trip Planner</span>
-              </button>
+                <Compass className="w-3.5 h-3.5" />
+                <span>Explore Destinations</span>
+              </Link>
             </div>
           </div>
         </div>
@@ -80,21 +109,13 @@ export default function UserPortal({
         {activeTab === 'bookings' && (
           <div className="space-y-6">
             {bookings.length === 0 ? (
-              <div className="bg-[#0E201D] rounded-3xl p-12 text-center border border-white/10">
-                <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
-                  🏔️
-                </div>
-                <h3 className="text-xl font-bold font-serif text-white">No Trips Booked Yet</h3>
-                <p className="text-xs text-slate-400 max-w-md mx-auto mt-1 mb-6">
-                  Ready to experience the sacred peaks and living craft guilds of Uttarakhand? Explore our verified packages or generate an AI itinerary tailored to your budget.
-                </p>
-                <button
-                  onClick={onOpenAIPlanner}
-                  className="px-6 py-3 bg-emerald-600 text-white rounded-xl text-xs font-bold shadow-md hover:bg-emerald-500 transition"
-                >
-                  Generate AI Trip Plan
-                </button>
-              </div>
+              <EmptyState
+                icon={Compass}
+                title="No Trips Booked Yet"
+                description="Ready to experience the sacred peaks and living craft guilds of Uttarakhand? Explore our verified packages or generate an AI itinerary tailored to your budget."
+                actionLabel="Generate AI Trip Plan"
+                onAction={onOpenAIPlanner}
+              />
             ) : (
               bookings.map((booking) => (
                 <div

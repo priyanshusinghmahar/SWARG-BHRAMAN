@@ -606,188 +606,88 @@ export const FAMOUS_FOOD_AND_ART_SHOPS = [
 
 export const GALLERY_PHOTOS = [
   {
-    id: 'g-1',
-    title: 'Nanda Devi Sanctuary Sunrise',
-    location: 'Auli / Joshimath',
+    id: 'photo-1',
+    title: 'Kedarnath Dham Shrine under Alpenglow',
+    location: 'Kedarnath Dham (3,584m), Rudraprayag',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80',
+    photographer: 'Vikram Joshi (Native Pilgrim)',
+    likes: 342,
+    description: 'The ancient 8th-century stone temple stands illuminated at dusk against towering snow-covered Himalayan massifs.'
+  },
+  {
+    id: 'photo-2',
+    title: 'Nanda Devi Sanctuary Golden Sunrise',
+    location: 'Auli (3,050m), Chamoli',
     category: 'High Peaks',
     image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'Arjun Rawat (Joshimath)',
-    likes: 428,
-    description: 'Golden morning light catching the sacred summit of India’s second highest peak.'
+    photographer: 'Priyanshu Singh (Expedition Guide)',
+    likes: 289,
+    description: 'First rays of morning sunlight setting the highest peak in Uttarakhand on golden fire above the pine treeline.'
   },
   {
-    id: 'g-2',
-    title: 'Divine Evening Ganga Aarti',
-    location: 'Triveni Ghat, Rishikesh',
+    id: 'photo-3',
+    title: 'Maha Ganga Evening Aarti at Triveni Ghat',
+    location: 'Rishikesh, Dehradun',
     category: 'Spiritual',
     image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'Siddharth Bhatt (Rishikesh)',
-    likes: 615,
-    description: 'Flaming multi-tiered brass lamps lifted in reverence as twilight settles on the Ganges.'
+    photographer: 'Ananya Sharma',
+    likes: 198,
+    description: 'Brass oil lamps, Vedic chants, and floating marigolds dancing on the turquoise currents of mother Ganga.'
   },
   {
-    id: 'g-3',
-    title: 'Ancient Stone Shrines of Kedarnath',
-    location: 'Kedarnath Dham (3,584m)',
-    category: 'Spiritual',
-    image: 'https://images.unsplash.com/photo-1609766857041-ed402ea8069a?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'Pooja Kandpal',
-    likes: 890,
-    description: 'The monumental 8th-century stone temple standing stoic against snow-capped peaks.'
-  },
-  {
-    id: 'g-4',
-    title: 'Sacred Aipan Motifs on Red Ochre',
-    location: 'Almora Heritage Quarter',
-    category: 'Local Arts & Culture',
-    image: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'Meenakshi Joshi Studio',
-    likes: 340,
-    description: 'Intricate white rice paste geometric mandalas drawn with four fingers on Geru base.'
-  },
-  {
-    id: 'g-5',
-    title: 'Emerald Naini Lake from China Peak',
-    location: 'Nainital, Kumaon',
+    id: 'photo-4',
+    title: 'Valley of Flowers High Alpine Bloom',
+    location: 'Chamoli (3,658m)',
     category: 'Lakes & Valleys',
     image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'Vikas Pande',
-    likes: 512,
-    description: 'The iconic eye-shaped body of Naini lake reflecting drifting clouds and green hills.'
+    photographer: 'Saurabh Rawat',
+    likes: 412,
+    description: 'Endemic Himalayan blue poppies, Brahmakamal, and alpine carpets thriving in a UNESCO World Heritage sanctuary.'
   },
   {
-    id: 'g-6',
-    title: 'Tungnath Temple Summit in Snow',
-    location: 'Chopta, Rudraprayag',
-    category: 'High Peaks',
-    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'Himanshu Negi',
-    likes: 720,
-    description: 'The highest Shiva shrine on Earth at 3,680 meters, wrapped in pristine winter frost.'
+    id: 'photo-5',
+    title: 'Tungnath: World Highest Shiva Shrine',
+    location: 'Chopta (3,680m), Rudraprayag',
+    category: 'Spiritual',
+    image: 'https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80',
+    photographer: 'Trekker Diary',
+    likes: 276,
+    description: 'Perched in the clouds on the Chandrashila ridge, surrounded by rhododendron blossoms and Himalayan monals.'
   },
   {
-    id: 'g-7',
-    title: 'Wild Bengal Tiger in Corbett Sal Glades',
-    location: 'Dhikala Zone, Jim Corbett',
-    category: 'Wildlife',
-    image: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'Wildlife Warden Rameshwar',
-    likes: 830,
-    description: 'Royal Bengal tiger stepping gracefully through the morning winter mist of Ramganga basin.'
-  },
-  {
-    id: 'g-8',
-    title: 'Alpine Blossoms in Valley of Flowers',
-    location: 'Chamoli UNESCO Biosphere',
-    category: 'Lakes & Valleys',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'Dr. Sunita Goswami',
-    likes: 670,
-    description: 'Vibrant carpet of endemic wild blue poppies and Himalayan geraniums at peak bloom.'
-  },
-  {
-    id: 'g-9',
-    title: 'Tamta Mohalla Coppersmith at Forge',
-    location: 'Almora Old City',
+    id: 'photo-6',
+    title: 'Master Artisan Aipan Geometric Art',
+    location: 'Almora, Kumaon',
     category: 'Local Arts & Culture',
-    image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'Devbhoomi Craft Archive',
-    likes: 295,
-    description: 'Rhythm of hammering resonant copper into traditional Ayurvedic water vessels.'
+    image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1200&q=80',
+    photographer: 'Kumaon Craft Collective',
+    likes: 165,
+    description: 'Sacred red clay (Geru) and hand-ground rice paste (Biswar) ceremonial chowki painted by Almora artisan guild.'
   },
   {
-    id: 'g-10',
-    title: 'Panchachuli Peaks from Munsiyari Ridge',
-    location: 'Johar Valley, Pithoragarh',
+    id: 'photo-7',
+    title: 'Panchachuli Five Chariots of Pandavas',
+    location: 'Munsiari (2,200m), Pithoragarh',
     category: 'High Peaks',
     image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'Kundan Bhotia',
-    likes: 540,
-    description: 'The legendary five cooking hearths of the Pandavas bathed in crimson alpenglow.'
+    photographer: 'Danu Shepherd',
+    likes: 310,
+    description: 'The iconic five snow peaks towering over the Gori Ganga river valley on a crystal clear morning.'
   },
   {
-    id: 'g-11',
-    title: 'Famous Bal Mithai with Maalu Leaf Singodi',
-    location: 'Almora Sweets Quarter',
-    category: 'Local Arts & Culture',
-    image: 'https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'Pahadi Flavors Collective',
-    likes: 410,
-    description: 'Iconic dark roasted khoya confection crowned with white sugar globules.'
-  },
-  {
-    id: 'g-12',
-    title: 'Bhotia Tribal Woman Weaving Chutka',
-    location: 'Dharchula / Munsiyari',
-    category: 'Local Arts & Culture',
-    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80',
-    photographer: 'SafarNama Team',
-    likes: 388,
-    description: 'Master weaver spinning natural sheep wool on heritage mountain ground looms.'
+    id: 'photo-8',
+    title: 'Tehri Dam Emerald Alpine Waters',
+    location: 'New Tehri, Garhwal',
+    category: 'Lakes & Valleys',
+    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80',
+    photographer: 'SwargBhraman Aviation',
+    likes: 224,
+    description: 'Sprawling emerald blue waters nestled amidst the rolling pine ridges of Tehri Garhwal.'
   }
 ];
 
-export const REVIEWS = [
-  {
-    id: 'rev-1',
-    userName: 'Aarav Sharma',
-    userCity: 'Bengaluru, India',
-    userAvatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80',
-    rating: 5,
-    date: 'November 2026',
-    tripTaken: 'Chopta-Tungnath & Aipan Workshop with Meenakshi',
-    badge: 'Verified Cultural Traveler',
-    comment: 'The highlight of our Uttarakhand journey was not just the breathtaking Chandrashila sunrise, but spending 3 hours in Almora with Meenakshi Ji learning the history and geometry of Aipan art! My kids painted their own wooden chowkis to bring home. The homestay arranged through Devbhoomi app was authentic, warm, and served delicious Bhatt ki Churkani!',
-    helpfulCount: 42,
-    photos: [
-      'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=400&q=80'
-    ]
-  },
-  {
-    id: 'rev-2',
-    userName: 'Elena Rostova',
-    userCity: 'Prague, Czech Republic',
-    userAvatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
-    rating: 5,
-    date: 'October 2026',
-    tripTaken: 'Rishikesh Yoga & Almora Kasar Devi Retreat',
-    badge: 'International Explorer',
-    comment: 'The AI Trip Planner was brilliant! I entered my budget of ₹35,000 for 7 days, and it balanced budget riverside camps in Shivpuri with an enchanting heritage homestay in Kasar Devi. The app connected me directly with Harish Tamta in Almora where I purchased an authentic hand-beaten copper water gagar without tourist markups.',
-    helpfulCount: 38,
-    photos: [
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=400&q=80'
-    ]
-  },
-  {
-    id: 'rev-3',
-    userName: 'Col. Rajesh Rawat (Retd.)',
-    userCity: 'Dehradun, Uttarakhand',
-    userAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
-    rating: 5,
-    date: 'October 2026',
-    tripTaken: 'Badrinath & Mana Village Heritage Tour',
-    badge: 'Native Himalayan Scout',
-    comment: 'As someone born in Garhwal, I am deeply impressed by how respectfully this platform handles our local traditions. Direct booking with Bhotia wool weavers in Munsiyari and authentic Bal Mithai from Kheem Singh Mohan Singh ensures money directly supports our hill families rather than big aggregators.',
-    helpfulCount: 56,
-    photos: []
-  },
-  {
-    id: 'rev-4',
-    userName: 'Tanvi & Rohan Mehta',
-    userCity: 'Mumbai, India',
-    userAvatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80',
-    rating: 5,
-    date: 'September 2026',
-    tripTaken: 'Auli Ski & Valley of Flowers Trek',
-    badge: 'Adventure Duo',
-    comment: 'The instant booking ticket and downloadable PDF pass made everything smooth at forest checkpoints. Also, the interactive map with contact buttons for local food rasois saved us from tourist traps. Best Mandua ki roti and Buransh juice in Ranikhet!',
-    helpfulCount: 29,
-    photos: [
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80'
-    ]
-  }
-];
+export const REVIEWS = [];
 
 export const TOUR_PACKAGES = [
   {
@@ -903,128 +803,7 @@ export const INITIAL_VENDOR_PRODUCTS = [
 ];
 
 
-export const LOCAL_GUIDES = [
-  {
-    id: 'gd-1',
-    name: 'Arjun Singh Negi',
-    title: 'Senior Trek Leader & High-Altitude Mountaineer',
-    base: 'Joshimath & Chamoli, Garhwal',
-    experienceYears: 14,
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-    coverImage: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80',
-    certifications: ['NIM Certified Mountain Leader', 'Wilderness First Responder (WFR)', 'IMF Registered Expedition Guide'],
-    specialties: ['Chopta Chandrashila Summit', 'Valley of Flowers & Hemkund', 'Kuari Pass & Pangarchulla Peak', 'Winter Snowshoeing'],
-    languages: ['Hindi', 'Garhwali', 'English'],
-    dailyRate: 1800,
-    rating: 4.98,
-    tripsLed: 215,
-    bio: 'Born in Joshimath beneath Nanda Devi. Trained at the Nehru Institute of Mountaineering (NIM) Uttarkashi with 14 years leading high-altitude Himalayan summits and eco-conscious bugyal treks.',
-    phone: '+91 94120 77812',
-    whatsapp: '919412077812',
-    verified: true,
-    badge: 'NIM Certified Master Scout'
-  },
-  {
-    id: 'gd-2',
-    name: 'Kundan Rawat',
-    title: 'Senior Wildlife Naturalist & Tiger Tracker',
-    base: 'Ramnagar, Jim Corbett National Park',
-    experienceYears: 18,
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
-    coverImage: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=800&q=80',
-    certifications: ['Govt. Licensed Senior Forest Naturalist', 'BirdLife International Certified Guide', 'Wildlife Photography Mentor'],
-    specialties: ['Dhikala Deep Jungle Safaris', 'Tiger & Leopard Pugmark Tracking', 'Himalayan Birdwatching (600+ species)', 'River Ramganga Ecology'],
-    languages: ['Hindi', 'Kumaoni', 'English'],
-    dailyRate: 2200,
-    rating: 4.96,
-    tripsLed: 340,
-    bio: 'A native of the Corbett buffer villages who has spent nearly two decades studying wild Bengal tiger behavior, Asian elephant herds, and migratory birds in the Sal glades.',
-    phone: '+91 98371 44520',
-    whatsapp: '919837144520',
-    verified: true,
-    badge: '18 Yrs Wildlife Veteran'
-  },
-  {
-    id: 'gd-3',
-    name: 'Pooja Pande',
-    title: 'Kumaon Cultural Historian & Heritage Storyteller',
-    base: 'Almora & Kasar Devi, Kumaon',
-    experienceYears: 9,
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80',
-    coverImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
-    certifications: ['State Tourism Licensed Heritage Guide', 'MA Ancient Himalayan History', 'Aipan Art Preservationist'],
-    specialties: ['Kasar Devi Cosmic Energy Belt', 'Katarmal Sun Temple Architecture', 'Paltan Bazaar Food & Bal Mithai Walks', 'Tamta Coppersmith History'],
-    languages: ['Hindi', 'Kumaoni', 'English', 'French'],
-    dailyRate: 1500,
-    rating: 4.99,
-    tripsLed: 180,
-    bio: 'Passionate researcher unraveling the 500-year legacy of the Chand dynasty, mystic poets of Crank’s Ridge, and guiding travelers through Almora’s heritage stone courtyards.',
-    phone: '+91 97560 33419',
-    whatsapp: '919756033419',
-    verified: true,
-    badge: 'Heritage Historian'
-  },
-  {
-    id: 'gd-4',
-    name: 'Virendra Singh Bisht',
-    title: 'Sacred Chardham & Spiritual Pilgrim Guide',
-    base: 'Rishikesh & Kedarnath Valley',
-    experienceYears: 16,
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80',
-    coverImage: 'https://images.unsplash.com/photo-1609766857041-ed402ea8069a?auto=format&fit=crop&w=800&q=80',
-    certifications: ['Uttarakhand Chardham Devasthanam Board Certified', 'Vedic Shloka & Ritualist', 'High-Altitude Pilgrim First-Aid'],
-    specialties: ['Kedarnath Jyotirlinga Yatra', 'Badrinath & Mana Village Darshan', 'Triveni Ghat Ganga Aarti Protocols', 'Panch Kedar Sacred Trekking'],
-    languages: ['Hindi', 'Garhwali', 'Sanskrit', 'English'],
-    dailyRate: 1600,
-    rating: 4.97,
-    tripsLed: 410,
-    bio: 'Guiding pilgrims safely up the Mandakini and Alaknanda gorges for over 16 years, combining profound spiritual insights with strict high-altitude safety management.',
-    phone: '+91 94115 88921',
-    whatsapp: '919411588921',
-    verified: true,
-    badge: 'Chardham Pilgrim Expert'
-  },
-  {
-    id: 'gd-5',
-    name: 'Mohan Singh Bhotia',
-    title: 'Alpine Expedition Leader & Johar Valley Native',
-    base: 'Munsiyari & Milam Glacier, Pithoragarh',
-    experienceYears: 12,
-    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80',
-    coverImage: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
-    certifications: ['NIM Advanced Mountaineering Course', 'Trans-Himalayan Route Explorer', 'Johar Tribal Folklore Mentor'],
-    specialties: ['Khaliya Top Alpine Meadow', 'Panchachuli Base Camp', 'Milam Glacier Frontier Trek', 'Bhotia Weaving Village Tours'],
-    languages: ['Hindi', 'Bhotia', 'Kumaoni', 'English'],
-    dailyRate: 2000,
-    rating: 4.95,
-    tripsLed: 145,
-    bio: 'Born into the indigenous Bhotia trading community of Munsiyari. Expert in navigating high passes, glacier moraines, and sharing ancient trade stories of Tibet.',
-    phone: '+91 94563 22890',
-    whatsapp: '919456322890',
-    verified: true,
-    badge: 'Johar Frontier Native'
-  },
-  {
-    id: 'gd-6',
-    name: 'Anita Chauhan',
-    title: 'Forest Naturalist & Deodar Eco-Walk Guide',
-    base: 'Mussoorie & Landour, Garhwal',
-    experienceYears: 8,
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
-    coverImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80',
-    certifications: ['WWF India Forest Trail Specialist', 'Himalayan Flora & Medicinal Plants Guide', 'Leave No Trace Master Educator'],
-    specialties: ['Landour Colonial Literature Walks', 'Jabarkhet Nature Reserve Trails', 'George Everest Peak Sunsets', 'Pahadi Medicinal Herb Foraging'],
-    languages: ['Hindi', 'Garhwali', 'English'],
-    dailyRate: 1400,
-    rating: 4.94,
-    tripsLed: 165,
-    bio: 'Specialist in the pristine deodar canopies of Landour and George Everest. Leads peaceful forest bathing sessions, Ruskin Bond literary trails, and medicinal plant foraging.',
-    phone: '+91 98370 99812',
-    whatsapp: '919837099812',
-    verified: true,
-    badge: 'Eco-Trail Educator'
-  }
-];
+export const LOCAL_GUIDES = [];
 
 
 export const FAMOUS_TEMPLES_AND_HISTORICAL_PLACES = [

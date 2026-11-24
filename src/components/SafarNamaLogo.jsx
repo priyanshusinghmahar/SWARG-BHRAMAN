@@ -1,1 +1,1 @@
-export { default, PahadiVibeLogo } from './PahadiVibeLogo';
+export { default, SwargBhramanLogo, SafarNamaLogo, PahadiVibeLogo } from './SwargBhramanLogo';

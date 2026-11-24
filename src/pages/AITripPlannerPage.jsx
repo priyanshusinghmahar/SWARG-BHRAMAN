@@ -1,13 +1,6 @@
 import React from 'react';
-import AITripPlanner from '../components/AITripPlanner';
+import { Navigate } from 'react-router-dom';
 
-export default function AITripPlannerPage({ onBookGeneratedPlan }) {
-  return (
-    <div className="pt-4 pb-12">
-      <AITripPlanner
-        onBookGeneratedPlan={onBookGeneratedPlan}
-        initialBudget={25000}
-      />
-    </div>
-  );
+export default function AITripPlannerPage() {
+  return <Navigate to= /personal-suggester replace />;
 }

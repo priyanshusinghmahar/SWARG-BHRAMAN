@@ -8,44 +8,44 @@ import {
 
 export default function PersonalSuggesterPage({ onBookCircuit, onSaveToTrips }) {
   return (
-    <div className="py-12 bg-[#090E1A] text-white min-h-screen">
+    <div className="py-12 bg-slate-50 dark:bg-[#090E1A] text-slate-900 dark:text-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-xs text-slate-400">
-          <Link to="/" className="hover:text-amber-400 transition">Home</Link>
+        <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
+          <Link to="/" className="hover:text-amber-600 dark:hover:text-amber-400 transition">Home</Link>
           <span>/</span>
-          <span className="text-amber-300 font-semibold">Personal Suggester & Mountain Matcher</span>
+          <span className="text-amber-600 dark:text-amber-300 font-semibold">Personal Suggester & Mountain Matcher</span>
         </div>
 
         {/* Page Hero Header */}
-        <div className="bg-gradient-to-r from-[#0C1528] via-[#111C36] to-[#0A1020] rounded-3xl p-6 sm:p-10 border border-amber-500/25 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+        <div className="bg-white dark:bg-gradient-to-r dark:from-[#0C1528] dark:via-[#111C36] dark:to-[#0A1020] rounded-3xl p-6 sm:p-10 border border-amber-500/30 dark:border-amber-500/25 shadow-xl relative overflow-hidden backdrop-blur-xl">
           <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-[100px] pointer-events-none" />
           <div className="relative z-10 max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-4 h-4 text-amber-400 animate-spin" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-700 dark:text-amber-300 text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-4 h-4 text-amber-500 dark:text-amber-400 animate-spin" />
               <span>Tailored Devbhoomi Intelligence • 0% Middleman</span>
             </div>
             
-            <h1 className="text-3xl sm:text-5xl font-extrabold font-serif text-white tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-extrabold font-serif text-slate-950 dark:text-white tracking-tight leading-tight">
               Uttarakhand Personal Mountain Suggester
             </h1>
             
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
               Don't guess where to travel in Devbhoomi. Tell us your current mood, companion group, travel style, and comfort level — our indigenous algorithm instantly matches you with authentic Himalayan circuits, native family homestays, and certified mountain scouts.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2 text-xs text-slate-300">
-              <div className="flex items-center gap-1.5 text-amber-300 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-amber-400" />
+            <div className="flex flex-wrap items-center gap-4 pt-2 text-xs text-slate-600 dark:text-slate-300">
+              <div className="flex items-center gap-1.5 text-amber-700 dark:text-amber-300 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-amber-500 dark:text-amber-400" />
                 <span>15+ Curated Regional Circuits</span>
               </div>
-              <div className="flex items-center gap-1.5 text-sky-300 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-sky-400" />
+              <div className="flex items-center gap-1.5 text-sky-700 dark:text-sky-300 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-sky-500 dark:text-sky-400" />
                 <span>Native Homestays & NIM Guides</span>
               </div>
-              <div className="flex items-center gap-1.5 text-emerald-300 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              <div className="flex items-center gap-1.5 text-emerald-700 dark:text-emerald-300 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                 <span>Real-time Dynamic Match Score</span>
               </div>
             </div>
